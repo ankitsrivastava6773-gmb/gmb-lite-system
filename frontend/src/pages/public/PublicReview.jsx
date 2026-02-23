@@ -49,12 +49,12 @@ export default function PublicReview() {
       try {
         setLoading(true);
 
-        const r1 = await fetch(`http://localhost:8002/r/${token}`);
+        const r1 = await fetch(`import.meta.env.VITE_API_URL/r/${token}`);
         const tdata = await r1.json();
         setRealClientId(tdata.client_id);
 
         const r2 = await fetch(
-          `http://localhost:8002/public-client/${tdata.client_id}`
+          `import.meta.env.VITE_API_URL/public-client/${tdata.client_id}`
         );
         const cdata = await r2.json();
 
@@ -80,7 +80,7 @@ export default function PublicReview() {
     setReviewText("");
 
     try {
-      const res = await fetch("http://localhost:8002/api/generate-review", {
+      const res = await fetch("import.meta.env.VITE_API_URL/api/generate-review", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
