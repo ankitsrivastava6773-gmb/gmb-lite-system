@@ -1,0 +1,155 @@
+.pr-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Inter, system-ui;
+  padding: 14px;
+}
+
+.pr-card {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 20px 55px rgba(0,0,0,0.15);
+}
+
+/* HEADER */
+.pr-header {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.pr-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #fff;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.pr-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pr-logo span {
+  font-size: 28px;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+.pr-shop h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.pr-shop p {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* ROW */
+.pr-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.pr-row select {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+  font-size: 14px;
+}
+
+/* STARS */
+.pr-stars {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.pr-star {
+  font-size: 38px;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: transform .15s;
+}
+
+.pr-star:hover {
+  transform: scale(1.15);
+}
+
+.pr-star.disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+.pr-hint {
+  font-size: 12px;
+  color: #777;
+  margin-top: 6px;
+}
+
+/* STATUS */
+.pr-status {
+  margin-top: 14px;
+  text-align: center;
+  color: #2563eb;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.pr-writing {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 3D PEN */
+.pr-pen {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #facc15, #f59e0b);
+  transform: rotate(-20deg);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+  animation: penMove 1.1s infinite ease-in-out;
+}
+
+@keyframes penMove {
+  0% { transform: rotate(-20deg) translateY(0); }
+  50% { transform: rotate(-20deg) translateY(-5px); }
+  100% { transform: rotate(-20deg) translateY(0); }
+}
+
+/* REVIEW */
+.pr-textarea {
+  width: 100%;
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  min-height: 140px;
+  background: #fafafa;
+  resize: none;
+  font-size: 14px;
+}
+
+.pr-loading {
+  padding: 30px;
+  text-align: center;
+}
