@@ -7,7 +7,7 @@ export default function PublicQR() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:8002/qr/${token}`)
+    fetch(`import.meta.env.VITE_API_URL/qr/${token}`)
       .then(res => res.json())
       .then(data => {
         if (data.redirect_url) {
